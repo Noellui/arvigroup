@@ -116,11 +116,11 @@
 
   .navbar { padding: 10px 20px; }
 
-  /* Hide AMFI on small screens */
-  .brand-divider,
-  .amfi-img { display: none; }
-
-  .logo-img { height: 44px; }
+  /* Scale logos for mobile so they both fit */
+  .navbar-brand { gap: 8px; }
+  .logo-img { height: 36px; }
+  .brand-divider { height: 28px; }
+  .amfi-img { height: 24px; }
 
   .navbar-links {
     display: none;
