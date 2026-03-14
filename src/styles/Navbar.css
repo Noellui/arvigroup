@@ -74,7 +74,140 @@
   font-weight: 600;
   cursor: pointer;
   padding: 0;
-  font-family: inherit;
+  font-family: 'Inter', sans-serif;
+  transition: color 0.2s;
+}
+
+.navbar-links li button:hover {
+  color: #1a3c6e;
+}
+
+/* Hamburger */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.hamburger span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: #1a3c6e;
+  border-radius: 3px;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .hamburger { display: flex; }
+
+  .navbar { padding: 10px 20px; }
+
+  /* Hide AMFI on small screens */
+  .brand-divider,
+  .amfi-img { display: none; }
+
+  .logo-img { height: 44px; }
+
+  .navbar-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    padding: 20px 40px;
+    gap: 16px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+
+  .navbar-links.open { display: flex; }
+
+  .navbar-topbar {
+    justify-content: center;
+    gap: 16px;
+    padding: 6px 16px;
+    flex-wrap: wrap;
+  }
+}.navbar-header {
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+/* Top bar */
+.navbar-topbar {
+  background-color: #1a3c6e;
+  color: #fff;
+  display: flex;
+  justify-content: flex-end;
+  gap: 30px;
+  padding: 6px 40px;
+  font-size: 13px;
+}
+
+/* Main nav */
+.navbar {
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 40px;
+  position: relative;
+}
+
+/* Brand: logo + divider + AMFI */
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.logo-img {
+  height: 72px;
+  width: auto;
+  object-fit: contain;
+  display: block;
+}
+
+.brand-divider {
+  width: 1px;
+  height: 40px;
+  background: #dde3f0;
+  flex-shrink: 0;
+}
+
+.amfi-img {
+  height: 32px;
+  width: auto;
+  object-fit: contain;
+  display: block;
+}
+
+/* Nav links */
+.navbar-links {
+  list-style: none;
+  display: flex;
+  gap: 32px;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-links li button {
+  background: none;
+  border: none;
+  color: #333;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
   transition: color 0.2s;
 }
 

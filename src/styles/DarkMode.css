@@ -1,0 +1,246 @@
+/* ============================================
+   DARK MODE — applied when [data-theme='dark']
+   is set on <html> element
+   ============================================ */
+
+[data-theme='dark'] {
+  --bg-primary: #0f0f0f;
+  --bg-secondary: #1a1a1a;
+  --bg-card: #1e1e1e;
+  --bg-section-alt: #141414;
+  --text-primary: #f0f0f0;
+  --text-secondary: #aaa;
+  --text-muted: #666;
+  --border: rgba(255,255,255,0.08);
+  --shadow: 0 4px 20px rgba(0,0,0,0.4);
+  --navy: #1a3c6e;
+  --orange: #e07b00;
+}
+
+/* ── Body ── */
+[data-theme='dark'] body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+/* ── Navbar ── */
+[data-theme='dark'] .navbar-header {
+  background: var(--bg-secondary);
+  border-bottom-color: var(--border);
+  box-shadow: 0 2px 20px rgba(0,0,0,0.4);
+}
+
+[data-theme='dark'] .navbar {
+  background-color: var(--bg-secondary);
+}
+
+[data-theme='dark'] .navbar-topbar {
+  background-color: #0a0a0a;
+}
+
+[data-theme='dark'] .navbar-links li button {
+  color: #ccc;
+}
+
+[data-theme='dark'] .navbar-links li button:hover {
+  color: #fff;
+}
+
+[data-theme='dark'] .navbar-links li.nav-cta button {
+  background: var(--navy);
+  color: #fff;
+}
+
+[data-theme='dark'] .hamburger span {
+  background-color: #fff;
+}
+
+[data-theme='dark'] .navbar-links.open {
+  background: var(--bg-secondary);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+}
+
+/* ── About section ── */
+[data-theme='dark'] .about-section {
+  background-color: var(--bg-primary);
+}
+
+[data-theme='dark'] .about-tag {
+  background-color: rgba(26,60,110,0.35);
+  color: #7aa3d4;
+}
+
+[data-theme='dark'] .about-heading {
+  color: #e8e8e8;
+}
+
+[data-theme='dark'] .about-intro {
+  color: var(--text-secondary);
+}
+
+[data-theme='dark'] .about-card {
+  background: var(--bg-card);
+  border-top-color: var(--orange);
+  box-shadow: var(--shadow);
+}
+
+[data-theme='dark'] .about-card h3 {
+  color: #e8e8e8;
+}
+
+[data-theme='dark'] .about-card p {
+  color: var(--text-secondary);
+}
+
+[data-theme='dark'] .about-stats {
+  background: #0d1f3c;
+}
+
+[data-theme='dark'] .review-bubble {
+  background: var(--bg-card);
+  border-left-color: var(--orange);
+  box-shadow: var(--shadow);
+}
+
+[data-theme='dark'] .review-bubble::after {
+  border-top-color: var(--bg-card);
+}
+
+[data-theme='dark'] .review-text {
+  color: var(--text-secondary);
+}
+
+[data-theme='dark'] .review-author {
+  color: #7aa3d4;
+}
+
+/* ── Services section ── */
+[data-theme='dark'] .services-section {
+  background-color: var(--bg-section-alt);
+}
+
+[data-theme='dark'] .services-tag {
+  background-color: rgba(224,123,0,0.15);
+  color: #f0a040;
+}
+
+[data-theme='dark'] .services-heading {
+  color: #e8e8e8;
+}
+
+[data-theme='dark'] .services-intro {
+  color: var(--text-secondary);
+}
+
+[data-theme='dark'] .service-card {
+  background: var(--bg-card);
+  border-bottom-color: var(--orange);
+  box-shadow: var(--shadow);
+}
+
+[data-theme='dark'] .service-card:hover {
+  background: #252525;
+  box-shadow: 0 16px 40px rgba(0,0,0,0.5);
+}
+
+[data-theme='dark'] .service-card h3 {
+  color: #e8e8e8;
+}
+
+[data-theme='dark'] .service-card p {
+  color: var(--text-secondary);
+}
+
+[data-theme='dark'] .how-we-work {
+  background: var(--bg-card);
+  border-color: var(--border);
+}
+
+[data-theme='dark'] .hww-heading {
+  color: #e8e8e8;
+}
+
+[data-theme='dark'] .hww-sub {
+  color: var(--text-secondary);
+}
+
+[data-theme='dark'] .hww-step p {
+  color: #ccc;
+}
+
+/* ── Contact section ── */
+[data-theme='dark'] .contact-section {
+  background-color: var(--bg-primary);
+}
+
+[data-theme='dark'] .contact-tag {
+  background-color: rgba(26,60,110,0.35);
+  color: #7aa3d4;
+}
+
+[data-theme='dark'] .contact-heading {
+  color: #e8e8e8;
+}
+
+[data-theme='dark'] .contact-intro {
+  color: var(--text-secondary);
+}
+
+[data-theme='dark'] .contact-info-item h4 {
+  color: #7aa3d4;
+}
+
+[data-theme='dark'] .contact-info-item p {
+  color: var(--text-secondary);
+}
+
+[data-theme='dark'] .contact-info-item {
+  border-bottom-color: var(--border);
+}
+
+[data-theme='dark'] .contact-form-wrapper {
+  background: var(--bg-card);
+  box-shadow: var(--shadow);
+}
+
+[data-theme='dark'] .form-group label {
+  color: #ccc;
+}
+
+[data-theme='dark'] .form-group input,
+[data-theme='dark'] .form-group select,
+[data-theme='dark'] .form-group textarea {
+  background: #2a2a2a;
+  border-color: #444;
+  color: #f0f0f0;
+}
+
+[data-theme='dark'] .form-group input:focus,
+[data-theme='dark'] .form-group select:focus,
+[data-theme='dark'] .form-group textarea:focus {
+  border-color: var(--orange);
+  background: #333;
+  box-shadow: 0 0 0 3px rgba(224,123,0,0.15);
+}
+
+[data-theme='dark'] .form-group select option {
+  background: #2a2a2a;
+  color: #f0f0f0;
+}
+
+/* ── Footer ── */
+[data-theme='dark'] .footer {
+  background: #080808;
+}
+
+[data-theme='dark'] .footer-top {
+  border-bottom-color: rgba(255,255,255,0.05);
+}
+
+[data-theme='dark'] .footer-arn-bar {
+  border-bottom-color: rgba(255,255,255,0.05);
+}
+
+[data-theme='dark'] .footer-bottom {
+  border-top-color: rgba(255,255,255,0.05);
+}

@@ -10,34 +10,46 @@
   gap: 48px;
   justify-content: space-between;
   flex-wrap: wrap;
-  padding-bottom: 48px;
+  padding-bottom: 36px;
   border-bottom: 1px solid rgba(255,255,255,0.1);
-  margin-bottom: 32px;
+  margin-bottom: 24px;
+  align-items: flex-start;
 }
 
+/* Brand column — now holds the disclosure text */
 .footer-brand {
   flex: 2;
-  max-width: 360px;
+  max-width: 480px;
 }
 
-.footer-logo {
-  font-size: 18px;
-  font-weight: 700;
-  color: #fff;
-  margin-bottom: 12px;
+.footer-disclosure-inline-title {
+  font-size: 11px;
+  font-weight: 600;
+  color: #e07b00;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+  border-left: 3px solid #e07b00;
+  padding-left: 10px;
 }
 
-.footer-brand p {
-  font-size: 13px;
-  color: rgba(255,255,255,0.55);
-  line-height: 1.8;
+.footer-disclosure-inline-text {
+  font-size: 15px;
+  color: rgba(255,255,255,0.75);
+  line-height: 2;
 }
 
+.footer-disclosure-inline-text strong {
+  color: rgba(255,255,255,0.9);
+  font-weight: 600;
+}
+
+/* ── Nav columns ── */
 .footer-col h4 {
-  font-size: 12px;
+  font-size: 11px;
   font-weight: 700;
   color: #e07b00;
-  letter-spacing: 1.5px;
+  letter-spacing: 2px;
   text-transform: uppercase;
   margin-bottom: 16px;
 }
@@ -61,57 +73,27 @@
   color: #e07b00;
 }
 
-/* ── Disclosure box ── */
-.footer-disclosure {
-  background: rgba(0, 0, 0, 0.25);
-  border-left: 3px solid #e07b00;
-  border-radius: 4px;
-  padding: 24px 28px;
-  margin-bottom: 28px;
-}
-
-.footer-disclosure-title {
-  font-size: 12px;
-  font-weight: 700;
-  color: #e07b00;
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
-  margin-bottom: 12px;
-}
-
-.footer-disclosure p {
-  font-size: 11.5px;
-  color: rgba(255,255,255,0.5);
-  line-height: 1.85;
-  margin-bottom: 0;
-}
-
-.footer-disclosure p strong {
-  color: rgba(255,255,255,0.75);
-  font-weight: 600;
-}
-
 /* ── ARN bar ── */
 .footer-arn-bar {
   display: flex;
   flex-wrap: wrap;
-  gap: 6px 0;
   align-items: center;
-  margin-top: 16px;
-  padding-top: 14px;
-  border-top: 1px solid rgba(255,255,255,0.08);
-  font-size: 11px;
+  gap: 4px 0;
+  padding: 16px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  margin-bottom: 20px;
+  font-size: 12px;
   color: rgba(255,255,255,0.45);
 }
 
 .footer-arn-bar span {
-  padding: 0 8px;
+  padding: 0 10px;
 }
 
 .footer-arn-dot {
   color: #e07b00;
   padding: 0 !important;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1;
 }
 
@@ -122,13 +104,24 @@
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 10px;
-  padding-top: 20px;
-  border-top: 1px solid rgba(255,255,255,0.08);
 }
 
 .footer-copy {
   font-size: 12px;
   color: rgba(255,255,255,0.3);
+}
+
+.footer-link {
+  color: #e07b00;
+  text-decoration: none;
+  font-size: 12px;
+  border-bottom: 1px solid rgba(224,123,0,0.4);
+  transition: color 0.2s, border-color 0.2s;
+}
+
+.footer-link:hover {
+  color: #ffaa44;
+  border-bottom-color: #ffaa44;
 }
 
 .footer-grievance {
@@ -142,6 +135,5 @@
   .footer-top { gap: 32px; }
   .footer-brand { max-width: 100%; }
   .footer-bottom { flex-direction: column; text-align: center; gap: 6px; }
-  .footer-arn-bar { justify-content: center; }
-  .footer-disclosure { padding: 18px 20px; }
+  .footer-arn-bar { justify-content: center; font-size: 11px; }
 }

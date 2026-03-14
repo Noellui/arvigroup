@@ -7,6 +7,7 @@ import Contact from './components/Contact';
 import Footer from './components/Footer';
 import './App.css';
 import './styles/Animations.css';
+import './styles/DarkMode.css';
 
 function App() {
   return (

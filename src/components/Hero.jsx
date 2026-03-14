@@ -5,17 +5,22 @@ const slides = [
   {
     title: "Your Partner in Financial Clarity and Growth",
     subtitle: "Data-driven precision meets traditional wealth stewardship — serving 700+ families since 2015.",
-    image: "/images/slide1.jpg",
+    image: "/slide1.jpg",
   },
   {
     title: "Invest Smart. Build an Enduring Legacy.",
     subtitle: "Mutual Funds, SIP, Fixed Income, Insurance & Portfolio Insights — all under one roof.",
-    image: "/images/slide2.jpg",
+    image: "/slide2.jpg",
+  },
+  {
+    title: "Where Every Decision is Data-Driven.",
+    subtitle: "Our boardroom is where strategy meets discipline — tailored for your financial future.",
+    image: "/slide3.jpg",
   },
   {
     title: "Your Goals. Our Data. Your Future.",
     subtitle: "We don't chase trends. We analyse data to build wealth that lasts generations.",
-    image: "/images/slide3.jpg",
+    image: "/slide4.jpg",
   },
 ];
 

@@ -22,15 +22,11 @@ const reviews = [
   },
 ];
 
-const StatItem = ({ value, label, prefix = '', suffix = '' }) => {
+const StatItem = ({ value, label, suffix = '' }) => {
   const { count, ref } = useCounter(value);
   return (
     <div className="stat-item" ref={ref}>
-      <h3>
-        {prefix}
-        <span className="stat-number">{count}</span>
-        {suffix}
-      </h3>
+      <h3><span className="stat-number">{count}</span>{suffix}</h3>
       <p>{label}</p>
     </div>
   );
@@ -74,54 +70,36 @@ const About = () => {
         </div>
       </div>
 
-      <h3 className="leadership-heading fade-up" ref={(el) => (itemsRef.current[5] = el)}>
-        Our Leadership
-      </h3>
-      <div className="leadership-cards">
-        <div className="leader-card fade-left" ref={(el) => (itemsRef.current[6] = el)}>
-          <div className="leader-icon">👩‍💼</div>
-          <h4>Mansi Shah</h4>
-          <span>Managing Director</span>
-        </div>
-        <div className="leader-card fade-right" ref={(el) => (itemsRef.current[7] = el)}>
-          <div className="leader-icon">👩‍💼</div>
-          <h4>Darshee Parikh</h4>
-          <span>Director</span>
-        </div>
-      </div>
-
-      {/* Stats with counter roll-up */}
       <div className="about-stats">
         <StatItem value={700} suffix="+" label="Private Clients & Families" />
         <StatItem value={10} suffix="+" label="Years of Experience" />
         <div className="stat-item">
-          <h3>ARN: 106777</h3>
-          <p>AMFI Registered</p>
-        </div>
-        <div className="stat-item">
-          <h3>Since 2015</h3>
-          <p>Established</p>
+          <h3>250Cr+</h3>
+          <p>Assets Under Management</p>
         </div>
       </div>
 
-      <div className="about-tag fade-up" style={{ marginTop: '70px' }} ref={(el) => (itemsRef.current[8] = el)}>
-        What Our Clients Say
-      </div>
-      <h2 className="about-heading fade-up" ref={(el) => (itemsRef.current[9] = el)}>
-        Client Reviews
-      </h2>
-      <div className="reviews-grid">
-        {reviews.map((review, i) => (
-          <div
-            key={i}
-            className="review-bubble fade-up"
-            ref={(el) => (itemsRef.current[10 + i] = el)}
-          >
-            <div className="review-quote">❝</div>
-            <p className="review-text">{review.text}</p>
-            <div className="review-author">— {review.author}</div>
-          </div>
-        ))}
+      {/* Reviews in own padded wrapper so no invisible fade-up gap */}
+      <div className="reviews-section">
+        <div className="about-tag fade-up" ref={(el) => (itemsRef.current[5] = el)}>
+          What Our Clients Say
+        </div>
+        <h2 className="about-heading fade-up" ref={(el) => (itemsRef.current[6] = el)}>
+          Client Reviews
+        </h2>
+        <div className="reviews-grid">
+          {reviews.map((review, i) => (
+            <div
+              key={i}
+              className="review-bubble fade-up"
+              ref={(el) => (itemsRef.current[7 + i] = el)}
+            >
+              <div className="review-quote">❝</div>
+              <p className="review-text">{review.text}</p>
+              <div className="review-author">— {review.author}</div>
+            </div>
+          ))}
+        </div>
       </div>
 
     </section>

@@ -64,7 +64,6 @@ const Services = () => {
             className="service-card fade-up"
             ref={(el) => (itemsRef.current[3 + i] = el)}
           >
-            <div className="service-icon">{service.icon}</div>
             <h3>{service.title}</h3>
             <p>{service.description}</p>
           </div>
