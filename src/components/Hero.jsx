@@ -5,17 +5,17 @@ const slides = [
   {
     title: "Your Trusted Wealth Management Partner",
     subtitle: "Building your financial future with clarity, trust & expertise.",
-    bg: "#1a3c6e",
+    image: "/images/slide1.jpg", // 🖼️ Replace with your image path
   },
   {
     title: "Invest Smart. Live Free.",
     subtitle: "Mutual Funds, SIP, Insurance & Tax Planning — all under one roof.",
-    bg: "#0f2a4e",
+    image: "/images/slide2.jpg", // 🖼️ Replace with your image path
   },
   {
     title: "Your Goals. Our Mission.",
     subtitle: "Personalized financial strategies tailored just for you.",
-    bg: "#14345c",
+    image: "/images/slide3.jpg", // 🖼️ Replace with your image path
   },
 ];
 
@@ -30,13 +30,37 @@ const Hero = () => {
   }, []);
 
   return (
-    <section id="hero" className="hero" style={{ backgroundColor: slides[current].bg }}>
+    <section id="hero" className="hero">
+
+      {/* Background Images */}
+      {slides.map((slide, i) => (
+        <div
+          key={i}
+          className={`hero-bg ${i === current ? 'active' : ''}`}
+          style={{ backgroundImage: `url(${slide.image})` }}
+        />
+      ))}
+
+      {/* Dark overlay */}
+      <div className="hero-overlay" />
+
+      {/* Content */}
       <div className="hero-content">
         <h1 className="hero-title">{slides[current].title}</h1>
         <p className="hero-subtitle">{slides[current].subtitle}</p>
         <div className="hero-buttons">
-          <a href="/contact" className="btn-primary">Schedule a Meeting</a>
-          <a href="/about" className="btn-secondary">Learn More</a>
+          <button
+            className="btn-primary"
+            onClick={() => document.getElementById('contact').scrollIntoView({ behavior: 'smooth' })}
+          >
+            Schedule a Meeting
+          </button>
+          <button
+            className="btn-secondary"
+            onClick={() => document.getElementById('about').scrollIntoView({ behavior: 'smooth' })}
+          >
+            Learn More
+          </button>
         </div>
       </div>
 
@@ -50,6 +74,7 @@ const Hero = () => {
           />
         ))}
       </div>
+
     </section>
   );
 };
