@@ -2,6 +2,7 @@ import React from 'react';
 import '../styles/About.css';
 import useScrollAnimation from './useScrollAnimation';
 import useCounter from './useCounter';
+import TiltCard from './TiltCard';
 
 const reviews = [
   {
@@ -50,24 +51,22 @@ const About = () => {
       </p>
 
       <div className="about-cards">
-        <div className="about-card fade-left" ref={(el) => (itemsRef.current[3] = el)}>
-          <div className="about-card-icon">🎯</div>
+        <TiltCard className="about-card fade-left" ref={(el) => (itemsRef.current[3] = el)}>
           <h3>Our Mission</h3>
           <p>
             To be the essential partner in your financial life. We build your financial future on a
             foundation of complete transparency and strategic, customized distribution methods.
             Every recommendation we make is focused on strengthening your financial stability for the long term.
           </p>
-        </div>
-        <div className="about-card fade-right" ref={(el) => (itemsRef.current[4] = el)}>
-          <div className="about-card-icon">🔭</div>
+        </TiltCard>
+        <TiltCard className="about-card fade-right" ref={(el) => (itemsRef.current[4] = el)}>
           <h3>Our Vision</h3>
           <p>
             We aspire to a future where every client experiences total financial clarity. Our goal is
             to provide a foundation so robust that it transforms every life goal into an achievable
             reality, ensuring you have the enduring stability needed to navigate an ever-changing world.
           </p>
-        </div>
+        </TiltCard>
       </div>
 
       <div className="about-stats">
@@ -89,7 +88,7 @@ const About = () => {
         </h2>
         <div className="reviews-grid">
           {reviews.map((review, i) => (
-            <div
+            <TiltCard
               key={i}
               className="review-bubble fade-up"
               ref={(el) => (itemsRef.current[7 + i] = el)}
@@ -97,7 +96,7 @@ const About = () => {
               <div className="review-quote">❝</div>
               <p className="review-text">{review.text}</p>
               <div className="review-author">— {review.author}</div>
-            </div>
+            </TiltCard>
           ))}
         </div>
       </div>

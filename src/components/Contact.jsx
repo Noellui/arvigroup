@@ -21,30 +21,36 @@ const Contact = () => {
       <div className="contact-wrapper">
         <div className="contact-info fade-left" ref={(el) => (itemsRef.current[3] = el)}>
           <div className="contact-info-item">
-            <div className="contact-info-icon">📍</div>
             <div>
               <h4>Registered Office</h4>
-              <p>408, Times Square Arcade-1, Near Ravija Plaza,<br />
-                Opposite Rambag, Thaltej, Shilaj,<br />
-                Ahmedabad, Gujarat – 380059</p>
+              <p>
+                <a 
+                  href="https://www.google.com/maps/search/408,+Times+Square+Arcade-1,+Near+Ravija+Plaza,+Opposite+Rambag,+Thaltej,+Shilaj,+Ahmedabad,+Gujarat+380059" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  style={{ color: 'inherit', textDecoration: 'none' }}
+                  className="address-link"
+                >
+                  408, Times Square Arcade-1, Near Ravija Plaza,<br />
+                  Opposite Rambag, Thaltej, Shilaj,<br />
+                  Ahmedabad, Gujarat – 380059
+                </a>
+              </p>
             </div>
           </div>
           <div className="contact-info-item">
-            <div className="contact-info-icon">📞</div>
             <div>
               <h4>Phone</h4>
               <p>+91 9825279602 (Mansi Shah)</p>
             </div>
           </div>
           <div className="contact-info-item">
-            <div className="contact-info-icon">📧</div>
             <div>
               <h4>Email</h4>
               <p>Aarvi_ms@yahoo.co.in</p>
             </div>
           </div>
           <div className="contact-info-item">
-            <div className="contact-info-icon">🕐</div>
             <div>
               <h4>Working Hours</h4>
               <p>Mon – Sat: 9:00 AM – 6:00 PM</p>
@@ -54,7 +60,6 @@ const Contact = () => {
         <div className="contact-form-wrapper fade-right" ref={(el) => (itemsRef.current[4] = el)}>
           {state.succeeded ? (
             <div className="form-success-box">
-              <div className="form-success-icon">✅</div>
               <h3>Message Sent!</h3>
               <p>Thank you for reaching out. We'll get back to you shortly.</p>
             </div>

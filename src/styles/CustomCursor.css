@@ -1,0 +1,32 @@
+/* We no longer hide the default cursor for the spotlight effect */
+body, a, button, .service-card, .about-card, .review-bubble, .tilt-card {
+  cursor: auto;
+}
+
+a, button, .service-card, .about-card, .review-bubble, .tilt-card {
+  cursor: pointer;
+}
+
+.custom-cursor-spotlight {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 600px;
+  height: 600px;
+  /* Soft, large blue gradient that fades into full transparency for Light Mode */
+  background: radial-gradient(circle at center, rgba(26, 60, 110, 0.08) 0%, transparent 65%);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9998; /* Places the spotlight over most content without blocking clicks */
+  transition: width 0.6s cubic-bezier(0.22, 1, 0.36, 1), 
+              height 0.6s cubic-bezier(0.22, 1, 0.36, 1), 
+              background 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: transform;
+}
+
+.custom-cursor-spotlight.hovering {
+  width: 800px;
+  height: 800px;
+  /* Shifts to an orange spotlight when hovering interactive elements in Light Mode */
+  background: radial-gradient(circle at center, rgba(224, 123, 0, 0.12) 0%, transparent 65%);
+}

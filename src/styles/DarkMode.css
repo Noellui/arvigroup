@@ -16,11 +16,19 @@
   --navy: #1a3c6e;
   --orange: #e07b00;
 }
-
 /* ── Body ── */
 [data-theme='dark'] body {
   background-color: var(--bg-primary);
   color: var(--text-primary);
+}
+
+/* ── Custom Cursor Spotlight Overrides ── */
+[data-theme='dark'] .custom-cursor-spotlight {
+  background: radial-gradient(circle at center, rgba(224, 123, 0, 0.08) 0%, transparent 65%);
+}
+
+[data-theme='dark'] .custom-cursor-spotlight.hovering {
+  background: radial-gradient(circle at center, rgba(26, 60, 110, 0.12) 0%, transparent 65%);
 }
 
 /* ── Navbar ── */
@@ -149,6 +157,37 @@
 
 [data-theme='dark'] .service-card p {
   color: var(--text-secondary);
+}
+
+/* Service Modal Dark Mode Overrides */
+[data-theme='dark'] .service-modal-content {
+  background: var(--bg-card);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.6);
+  border: 1px solid var(--border);
+}
+
+[data-theme='dark'] .service-modal-close {
+  color: var(--text-muted);
+}
+
+[data-theme='dark'] .service-modal-close:hover {
+  color: var(--text-primary);
+}
+
+[data-theme='dark'] .service-modal-title {
+  color: #e8e8e8;
+}
+
+[data-theme='dark'] .service-modal-details {
+  color: var(--text-secondary);
+}
+
+[data-theme='dark'] .service-modal-cta {
+  background: var(--navy);
+}
+
+[data-theme='dark'] .service-modal-cta:hover {
+  background: #112a4d;
 }
 
 [data-theme='dark'] .how-we-work {
