@@ -110,8 +110,8 @@
   border-radius: 3px;
 }
 
-/* Mobile */
-@media (max-width: 768px) {
+/* Mobile and Tablet (Landscape) */
+@media (max-width: 1024px) {
   .hamburger { display: flex; }
 
   .navbar { padding: 10px 20px; }
