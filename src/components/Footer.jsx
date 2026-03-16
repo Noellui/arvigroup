@@ -53,8 +53,8 @@ const Footer = () => {
           <ul>
             <li>Aarvi_ms@yahoo.co.in</li>
             <li>+91 9825279602</li>
-            <li>Thaltej, Ahmedabad</li>
-            <li>Gujarat – 380059</li>
+            <li style={{ fontStyle: 'italic' }}>Thaltej, Ahmedabad</li>
+            <li style={{ fontStyle: 'italic' }}>Gujarat – 380059</li>
           </ul>
         </div>
       </div>

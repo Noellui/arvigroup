@@ -72,6 +72,15 @@
   line-height: 1.7;
 }
 
+.address-link {
+  color: inherit;
+  transition: color 0.2s ease;
+}
+
+.address-link:hover {
+  color: #1a3c6e;
+}
+
 .contact-form-wrapper {
   flex: 2;
   background: #ffffff;

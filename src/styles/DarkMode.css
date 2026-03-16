@@ -233,6 +233,10 @@
   color: var(--text-secondary);
 }
 
+[data-theme='dark'] .address-link:hover {
+  color: #e07b00;
+}
+
 [data-theme='dark'] .contact-info-item {
   border-bottom-color: var(--border);
 }

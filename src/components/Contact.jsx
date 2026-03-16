@@ -28,7 +28,7 @@ const Contact = () => {
                   href="https://www.google.com/maps/search/408,+Times+Square+Arcade-1,+Near+Ravija+Plaza,+Opposite+Rambag,+Thaltej,+Shilaj,+Ahmedabad,+Gujarat+380059" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  style={{ color: 'inherit', textDecoration: 'none' }}
+                  style={{ textDecoration: 'none', fontStyle: 'italic' }}
                   className="address-link"
                 >
                   408, Times Square Arcade-1, Near Ravija Plaza,<br />
