@@ -1,0 +1,46 @@
+.market-ticker-wrapper {
+    width: 100%;
+    background: #0d1f3c;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    overflow: hidden;
+    position: relative;
+    z-index: 999;
+    /* just below navbar */
+}
+
+/* Make the widget fill the wrapper cleanly */
+.market-ticker-wrapper .tradingview-widget-container {
+    width: 100%;
+}
+
+.market-ticker-wrapper .tradingview-widget-container__widget {
+    width: 100%;
+}
+
+/* Light mode — keep dark bar regardless */
+.market-ticker-wrapper {
+    background: #0d1f3c !important;
+}
+
+/* Thin top accent line in brand orange */
+.market-ticker-wrapper::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, #e07b00, #ffaa44, #e07b00);
+    background-size: 200% 100%;
+    animation: tickerAccent 3s linear infinite;
+}
+
+@keyframes tickerAccent {
+    0% {
+        background-position: 0% 0%;
+    }
+
+    100% {
+        background-position: 200% 0%;
+    }
+}

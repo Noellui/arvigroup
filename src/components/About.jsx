@@ -78,7 +78,6 @@ const About = () => {
         </div>
       </div>
 
-      {/* Reviews in own padded wrapper so no invisible fade-up gap */}
       <div className="reviews-section">
         <div className="about-tag fade-up" ref={(el) => (itemsRef.current[5] = el)}>
           What Our Clients Say
