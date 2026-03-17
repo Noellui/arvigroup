@@ -1,0 +1,167 @@
+/* ══════════════════════════════════════════════
+   LIGHT MODE VISUAL RICHNESS
+   ══════════════════════════════════════════════ */
+
+/* ── About — warm white with subtle dot pattern ── */
+.about-section {
+    background-color: #ffffff !important;
+    background-image: radial-gradient(circle, #dde8f8 1px, transparent 1px);
+    background-size: 28px 28px;
+}
+
+/* Mission/Vision cards — lift them with stronger shadow + warm tint */
+.about-card {
+    background: #fafcff !important;
+    border-top: 4px solid #1a3c6e !important;
+    box-shadow: 0 4px 24px rgba(26, 60, 110, 0.10) !important;
+}
+
+/* Reviews — warmer card background */
+.review-bubble {
+    background: #fafcff !important;
+    box-shadow: 0 4px 20px rgba(26, 60, 110, 0.08) !important;
+}
+
+/* ── Leadership — contrasting blue-grey tint ── */
+.leadership-section {
+    background-color: #eef2fa !important;
+    background-image: linear-gradient(135deg, #eef2fa 0%, #e8eef8 100%) !important;
+    border-top: 1px solid #d8e2f0;
+    border-bottom: 1px solid #d8e2f0;
+}
+
+.leader-card {
+    background: #ffffff !important;
+    box-shadow: 0 6px 28px rgba(26, 60, 110, 0.10) !important;
+}
+
+/* ── Services — pure white with subtle top accent line ── */
+.services-section {
+    background-color: #ffffff !important;
+    background-image: radial-gradient(circle, #dde8f8 1px, transparent 1px);
+    background-size: 28px 28px;
+}
+
+/* Service cards — give them a tinted background so they pop */
+.service-card {
+    background: #f4f8ff !important;
+    box-shadow: 0 4px 20px rgba(26, 60, 110, 0.08) !important;
+    border-bottom: 4px solid #1a3c6e !important;
+}
+
+/* How We Work box — give it a navy gradient so it anchors the section */
+.how-we-work {
+    background: linear-gradient(135deg, #1a3c6e 0%, #1e4d8c 100%) !important;
+    border-radius: 20px !important;
+}
+
+.hww-heading {
+    color: #ffffff !important;
+}
+
+.hww-sub {
+    color: rgba(255, 255, 255, 0.75) !important;
+}
+
+.hww-step p {
+    color: rgba(255, 255, 255, 0.85) !important;
+}
+
+.hww-step-number {
+    background-color: rgba(255, 255, 255, 0.15) !important;
+    color: #ffffff !important;
+    border: 2px solid rgba(255, 255, 255, 0.3) !important;
+}
+
+.hww-step:hover .hww-step-number {
+    background-color: #e07b00 !important;
+    border-color: #e07b00 !important;
+}
+
+/* ── Contact — contrasting blue-grey tint ── */
+.contact-section {
+    background-color: #eef2fa !important;
+    background-image: linear-gradient(135deg, #eef2fa 0%, #e8eef8 100%) !important;
+    border-top: 1px solid #d8e2f0;
+}
+
+.contact-form-wrapper {
+    background: #ffffff !important;
+    box-shadow: 0 8px 32px rgba(26, 60, 110, 0.10) !important;
+}
+
+/* ── Section tags — make them bolder and more visible ── */
+.about-tag,
+.services-tag,
+.contact-tag,
+.leadership-tag {
+    font-weight: 700 !important;
+    letter-spacing: 1.5px !important;
+    box-shadow: 0 2px 8px rgba(26, 60, 110, 0.12);
+}
+
+/* ── Tighten excess bottom padding on services ── */
+.services-section {
+    padding-bottom: 60px !important;
+}
+
+/* ══════════════════════════════════════════════
+   DARK MODE — keep original, just ensure
+   how-we-work reverts properly
+   ══════════════════════════════════════════════ */
+[data-theme='dark'] .about-section,
+[data-theme='dark'] .services-section {
+    background-color: #0f0f0f !important;
+    background-image: none !important;
+    border: none !important;
+}
+
+[data-theme='dark'] .leadership-section,
+[data-theme='dark'] .contact-section {
+    background-color: #141414 !important;
+    background-image: none !important;
+    border-color: rgba(255, 255, 255, 0.05) !important;
+}
+
+[data-theme='dark'] .about-card,
+[data-theme='dark'] .review-bubble,
+[data-theme='dark'] .leader-card {
+    background: #1e1e1e !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4) !important;
+}
+
+[data-theme='dark'] .service-card {
+    background: #1e1e1e !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4) !important;
+}
+
+[data-theme='dark'] .contact-form-wrapper {
+    background: #1e1e1e !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4) !important;
+}
+
+[data-theme='dark'] .how-we-work {
+    background: #1e1e1e !important;
+}
+
+[data-theme='dark'] .hww-heading {
+    color: #e8e8e8 !important;
+}
+
+[data-theme='dark'] .hww-sub {
+    color: #aaa !important;
+}
+
+[data-theme='dark'] .hww-step p {
+    color: #ccc !important;
+}
+
+[data-theme='dark'] .hww-step-number {
+    background-color: #1a3c6e !important;
+    color: #fff !important;
+    border: none !important;
+}
+
+[data-theme='dark'] .hww-step:hover .hww-step-number {
+    background-color: #e07b00 !important;
+}

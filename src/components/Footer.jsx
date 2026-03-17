@@ -1,18 +1,14 @@
 import React from 'react';
 import '../styles/Footer.css';
 
-const Footer = () => {
+const Footer = ({ onShowDisclosure }) => {
   const scrollTo = (id) => {
     document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
   };
 
   return (
     <footer className="footer">
-
-      {/* ── Top three-column section ── */}
       <div className="footer-top">
-
-        {/* Col 1 – About */}
         <div className="footer-about">
           <h4 className="footer-col-title">About Us</h4>
           <p className="footer-about-text">
@@ -22,7 +18,6 @@ const Footer = () => {
           </p>
         </div>
 
-        {/* Col 2 – Nav */}
         <div className="footer-col">
           <h4 className="footer-col-title">Footer Menu</h4>
           <ul>
@@ -31,19 +26,17 @@ const Footer = () => {
             <li onClick={() => scrollTo('leadership')}><span className="footer-arrow">›</span> Leadership</li>
             <li onClick={() => scrollTo('services')}><span className="footer-arrow">›</span> Services</li>
             <li onClick={() => scrollTo('contact')}><span className="footer-arrow">›</span> Contact Us</li>
+            <li onClick={onShowDisclosure} className="footer-disclosure-link">
+              <span className="footer-arrow">›</span> Commission Disclosures
+            </li>
           </ul>
         </div>
 
-        {/* Col 3 – Contact */}
         <div className="footer-col footer-contact-col">
           <h4 className="footer-col-title">Contact Info</h4>
           <div className="footer-contact-item">
             <div className="footer-contact-icon">📍</div>
-            <p>
-              408, Times Square Arcade-1, Near Ravija Plaza,<br />
-              Opposite Rambag, Thaltej, Shilaj,<br />
-              Ahmedabad, Gujarat – 380059
-            </p>
+            <p>408, Times Square Arcade-1, Near Ravija Plaza,<br />Opposite Rambag, Thaltej, Shilaj,<br />Ahmedabad, Gujarat – 380059</p>
           </div>
           <div className="footer-contact-item">
             <div className="footer-contact-icon">✉️</div>
@@ -56,46 +49,51 @@ const Footer = () => {
         </div>
       </div>
 
-      {/* ── Divider ── */}
       <div className="footer-divider" />
 
-      {/* ── Full-width Disclosure block ── */}
       <div className="footer-disclosure">
-        <p className="footer-disclosure-title">Disclosure</p>
-        <p className="footer-disclosure-body">
-          Risk Factors – Investments in Mutual Funds are subject to Market Risks. Read all
-          scheme-related documents carefully before investing. Mutual Fund Schemes do not assure or
-          guarantee any returns. Past performances of any Mutual Fund Scheme may or may not be
-          sustained in the future. There is no guarantee that the investment objective of any
-          suggested scheme shall be achieved. All existing and prospective investors are advised to
-          check and evaluate the Exit loads and other cost structures (TER) applicable at the time of
-          making the investment before finalizing any investment decision for Mutual Funds schemes. We
-          deal in Regular Plans only for Mutual Fund Schemes and earn a Trailing Commission on client
-          investments. Disclosure of commission earnings is made to clients at the time of investments.
+
+        {/* AMFI heading */}
+        <p className="footer-amfi-heading">
+          Aarvi Data Analytics Services Pvt. Ltd. is an AMFI Registered Mutual Fund Distributor
         </p>
-        <p className="footer-disclosure-body footer-arn-line">
-          AMFI Registered Mutual Fund Distributor &nbsp;|&nbsp; ARN – 106777 &nbsp;|&nbsp;
-          Date of initial Registration: October 20, 2015 &nbsp;|&nbsp;
-          Validity of ARN-106777 extends to October 19, 2027
+
+        {/* ARN details */}
+        <p className="footer-arn-detail">ARN – 106777 &nbsp;|&nbsp; Date of Initial Registration: October 20, 2015 &nbsp;|&nbsp; Valid Until: October 19, 2027</p>
+
+        {/* Links row */}
+        <p className="footer-links-row">
+          <a href="https://www.sebi.gov.in/filings/mutual-funds.html" target="_blank" rel="noreferrer" className="footer-sid-link">SID / SAI / KIM</a>
+          <span className="footer-link-divider">&nbsp;|&nbsp;</span>
+          <a href="YOUR_CODE_OF_CONDUCT_URL_HERE" target="_blank" rel="noreferrer" className="footer-sid-link">Code of Conduct</a>
         </p>
+
+        <div className="footer-disclosure-divider" />
+
+        {/* Disclaimer paragraphs */}
         <p className="footer-disclosure-body">
-          <a
-            href="https://www.sebi.gov.in/filings/mutual-funds.html"
-            target="_blank"
-            rel="noreferrer"
-            className="footer-sid-link"
-          >
-            SID / SAI / KIM
-          </a>
+          <strong>Disclaimer:</strong> Mutual Fund investments are subject to market risks, read all scheme related documents carefully.
+          Scheme NAVs may fluctuate based on market factors, and past performance is not indicative of future results. No dividends are guaranteed.
         </p>
+
         <p className="footer-disclosure-body">
+          Aarvi Data Analytics Services Pvt. Ltd. (ARN – 106777) makes no warranties and accepts no liability for any damages or losses
+          arising from the use of this website. As an AMFI-registered Mutual Fund Distributor (not a SEBI-registered Investment Adviser),
+          we deal exclusively in Regular Plans and earn trailing commissions. Content provided is for general information, not personalized
+          financial advice. Website terms and conditions apply.
+        </p>
+
+        <div className="footer-disclosure-divider" />
+
+        {/* Grievance & copyright */}
+        <p className="footer-disclosure-body footer-grievance">
           Grievance Officer: Mansi Shah &nbsp;|&nbsp; Aarvi_ms@yahoo.co.in &nbsp;|&nbsp; +91 9825279602
         </p>
         <p className="footer-disclosure-body footer-copy">
           © 2025 Aarvi Data Analytics Services Pvt. Ltd. All rights reserved.
         </p>
-      </div>
 
+      </div>
     </footer>
   );
 };

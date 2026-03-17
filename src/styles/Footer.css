@@ -64,6 +64,11 @@
   color: #e07b00;
 }
 
+/* Commission Disclosures item — always orange */
+.footer-disclosure-link {
+  color: #e07b00 !important;
+}
+
 .footer-arrow {
   color: #e07b00;
   font-size: 20px;
@@ -114,33 +119,71 @@
   background: rgba(255, 255, 255, 0.18);
 }
 
-/* ── Disclosure block ── */
+/* ── Disclaimer block ── */
 .footer-disclosure {
-  padding: 40px 0 36px;
+  padding: 48px 60px 40px;
   text-align: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(0, 0, 0, 0.12);
 }
 
-.footer-disclosure-title {
-  font-size: 12px;
+/* Bold AMFI heading (replaces old title) */
+.footer-amfi-heading {
+  font-size: 16px;
   font-weight: 700;
-  color: rgba(255, 255, 255, 0.7);
-  letter-spacing: 2.5px;
-  text-transform: uppercase;
-  margin-bottom: 18px;
+  color: #ffffff;
+  margin-bottom: 10px;
+  letter-spacing: 0.3px;
+}
+
+/* ARN / date details row */
+.footer-arn-detail {
+  font-size: 13px;
+  color: #e07b00;
+  font-weight: 600;
+  margin-bottom: 16px;
+  letter-spacing: 0.3px;
+}
+
+/* Inline horizontal rule between sections */
+.footer-disclosure-divider {
+  width: 120px;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.15);
+  margin: 20px auto;
 }
 
 .footer-disclosure-body {
-  font-size: 13.5px;
-  color: rgba(255, 255, 255, 0.72);
-  line-height: 2;
-  max-width: 980px;
-  margin: 0 auto 12px auto;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.65);
+  line-height: 1.9;
+  max-width: 860px;
+  margin: 0 auto 14px auto;
 }
 
-.footer-arn-line {
-  color: rgba(255, 255, 255, 0.78);
+.footer-disclosure-body strong {
+  color: rgba(255, 255, 255, 0.85);
+  font-weight: 600;
+}
+
+.footer-grievance {
   font-size: 13px;
-  margin-top: 18px;
+  color: rgba(255, 255, 255, 0.72);
+  margin-bottom: 6px;
+}
+
+/* ── SID / KIM / Code of Conduct row ── */
+.footer-links-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.footer-link-divider {
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 13.5px;
 }
 
 .footer-sid-link {
@@ -153,6 +196,25 @@
 }
 
 .footer-sid-link:hover {
+  color: #ffaa44;
+  border-bottom-color: #ffaa44;
+}
+
+/* ── Inline Commission Disclosures button inside disclaimer text ── */
+.footer-inline-link {
+  background: none;
+  border: none;
+  border-bottom: 1px solid rgba(224, 123, 0, 0.5);
+  padding: 0;
+  color: #e07b00;
+  font-size: inherit;
+  font-family: inherit;
+  font-weight: 600;
+  cursor: pointer;
+  transition: color 0.2s, border-color 0.2s;
+}
+
+.footer-inline-link:hover {
   color: #ffaa44;
   border-bottom-color: #ffaa44;
 }
@@ -188,23 +250,41 @@
 
 /* ── Mobile ── */
 @media (max-width: 900px) {
-  .footer { padding: 48px 32px 0; }
-  .footer-top { gap: 36px; }
+  .footer {
+    padding: 48px 32px 0;
+  }
+
+  .footer-top {
+    gap: 36px;
+  }
 }
 
 @media (max-width: 600px) {
-  .footer { padding: 40px 20px 0; }
+  .footer {
+    padding: 40px 20px 0;
+  }
+
   .footer-top {
     flex-direction: column;
     gap: 32px;
     padding-bottom: 36px;
   }
+
   .footer-about,
   .footer-col,
   .footer-contact-col {
     min-width: 100%;
   }
-  .footer-disclosure { padding: 28px 0 24px; }
-  .footer-disclosure-body { font-size: 12.5px; }
-  .footer-arn-line { font-size: 11.5px; }
+
+  .footer-disclosure {
+    padding: 28px 0 24px;
+  }
+
+  .footer-disclosure-body {
+    font-size: 12.5px;
+  }
+
+  .footer-arn-line {
+    font-size: 11.5px;
+  }
 }
