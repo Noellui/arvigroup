@@ -269,7 +269,29 @@
   }
 
   .contact-map {
-    margin: 32px 20px 0;
+    margin: 32px 20px;
     border-radius: 12px;
+    max-width: 1100px;
+    margin: 48px auto 0;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 8px 32px rgba(26, 60, 110, 0.12);
+
+    /* Force browser to promote map to its own GPU compositing layer */
+    will-change: transform;
+    transform: translateZ(0);
+    isolation: isolate;
+    backface-visibility: hidden;
+  }
+
+  .contact-map iframe {
+    display: block;
+    /* Keeps the iframe itself on the same compositing layer as its parent */
+    will-change: transform;
+    transform: translateZ(0);
+  }
+
+  [data-theme='dark'] .contact-map {
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4)
   }
 }

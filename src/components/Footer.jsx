@@ -65,7 +65,7 @@ const Footer = ({ onShowDisclosure }) => {
         <p className="footer-links-row">
           <a href="https://www.sebi.gov.in/filings/mutual-funds.html" target="_blank" rel="noreferrer" className="footer-sid-link">SID / SAI / KIM</a>
           <span className="footer-link-divider">&nbsp;|&nbsp;</span>
-          <a href="YOUR_CODE_OF_CONDUCT_URL_HERE" target="_blank" rel="noreferrer" className="footer-sid-link">Code of Conduct</a>
+          <a href="https://www.amfiindia.com/Themes/Theme1/downloads/RevisedCodeofConductforMutualFundDistributors-April2022.pdf" target="_blank" rel="noreferrer" className="footer-sid-link">Code of Conduct</a>
         </p>
 
         <div className="footer-disclosure-divider" />

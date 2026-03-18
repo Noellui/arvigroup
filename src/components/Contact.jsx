@@ -1,11 +1,34 @@
-import React from 'react';
+import React, { memo, useMemo } from 'react';
 import { useForm, ValidationError } from '@formspree/react';
 import '../styles/Contact.css';
 import useScrollAnimation from './useScrollAnimation';
 
+// Map is memoized so it never re-renders on parent state changes
+const OfficeMap = memo(() => (
+  <iframe
+    title="Aarvi Office Location"
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3671.2876299328473!2d72.49856687616261!3d23.04991427915463!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e84bab9fd71cf%3A0xa2faff5944f8f0d!2sAarvi%20Data%20analytics%20Services%20Private%20Limited!5e0!3m2!1sen!2sin!4v1773777705357!5m2!1sen!2sin"
+    width="100%"
+    height="340"
+    style={{ border: 0, borderRadius: '16px', display: 'block' }}
+    allowFullScreen=""
+    loading="lazy"
+    referrerPolicy="no-referrer-when-downgrade"
+  />
+));
+
+OfficeMap.displayName = 'OfficeMap';
+
 const Contact = () => {
   const itemsRef = useScrollAnimation();
   const [state, handleSubmit] = useForm("xeerkovr");
+
+  // Memoize the map wrapper so the ref callback doesn't cause re-renders
+  const mapSection = useMemo(() => (
+    <div className="contact-map">
+      <OfficeMap />
+    </div>
+  ), []);
 
   return (
     <section id="contact" className="contact-section">
@@ -57,6 +80,7 @@ const Contact = () => {
             </div>
           </div>
         </div>
+
         <div className="contact-form-wrapper fade-right" ref={(el) => (itemsRef.current[4] = el)}>
           {state.succeeded ? (
             <div className="form-success-box">
@@ -109,18 +133,9 @@ const Contact = () => {
         </div>
       </div>
 
-      {/* ── Google Maps ── */}
-      <div className="contact-map fade-up" ref={(el) => (itemsRef.current[5] = el)}>
-        <iframe
-          title="Aarvi Office Location"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3671.2876299328473!2d72.49856687616261!3d23.04991427915463!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e84bab9fd71cf%3A0xa2faff5944f8f0d!2sAarvi%20Data%20analytics%20Services%20Private%20Limited!5e0!3m2!1sen!2sin!4v1773777705357!5m2!1sen!2sin"
-          width="100%"
-          height="340"
-          style={{ border: 0, borderRadius: '16px', display: 'block' }}
-          allowFullScreen=""
-          loading="lazy"
-          referrerPolicy="no-referrer-when-downgrade"
-        />
+      {/* Memoized map — never re-renders */}
+      <div className="fade-up" ref={(el) => (itemsRef.current[5] = el)}>
+        {mapSection}
       </div>
     </section>
   );
