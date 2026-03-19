@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
-import MarketTicker from './components/MarketTicker';
 import About from './components/About';
 import Leadership from './components/Leadership';
 import Services from './components/Services';
