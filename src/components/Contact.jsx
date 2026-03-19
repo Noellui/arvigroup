@@ -51,7 +51,7 @@ const Contact = () => {
                   href="https://www.google.com/maps/search/408,+Times+Square+Arcade-1,+Near+Ravija+Plaza,+Opposite+Rambag,+Thaltej,+Shilaj,+Ahmedabad,+Gujarat+380059"
                   target="_blank"
                   rel="noopener noreferrer"
-                  style={{ textDecoration: 'none', fontStyle: 'italic' }}
+                  style={{ textDecoration: 'none', fontStyle: 'normal' }}
                   className="address-link"
                 >
                   408, Times Square Arcade-1, Near Ravija Plaza,<br />
@@ -70,13 +70,13 @@ const Contact = () => {
           <div className="contact-info-item">
             <div>
               <h4>Email</h4>
-              <p>Aarvi_ms@yahoo.co.in</p>
+              <p>aarvi_ms@yahoo.co.in</p>
             </div>
           </div>
           <div className="contact-info-item">
             <div>
               <h4>Working Hours</h4>
-              <p>Mon – Sat: 9:00 AM – 6:00 PM</p>
+              <p>Mon – Sat: 10:00 AM – 6:00 PM</p>
             </div>
           </div>
         </div>

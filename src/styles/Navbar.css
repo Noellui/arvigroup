@@ -9,6 +9,9 @@
   padding: 14px 40px;
   box-sizing: border-box;
   pointer-events: none;
+  transform: translateZ(0);
+  will-change: transform;
+  backface-visibility: hidden
 }
 
 .navbar-topbar {

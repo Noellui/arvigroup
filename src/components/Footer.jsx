@@ -59,7 +59,7 @@ const Footer = ({ onShowDisclosure }) => {
         </p>
 
         {/* ARN details */}
-        <p className="footer-arn-detail">ARN – 106777 &nbsp;|&nbsp; Date of Initial Registration: October 20, 2015 &nbsp;|&nbsp; Valid Until: October 19, 2027</p>
+        <p className="footer-arn-detail">ARN – 106777 &nbsp;|&nbsp; Date of Initial Registration: October 20, 2015 &nbsp;|&nbsp; Valid Until: 3 Nov 2027</p>
 
         {/* Links row */}
         <p className="footer-links-row">
@@ -87,10 +87,10 @@ const Footer = ({ onShowDisclosure }) => {
 
         {/* Grievance & copyright */}
         <p className="footer-disclosure-body footer-grievance">
-          Grievance Officer: Mansi Shah &nbsp;|&nbsp; Aarvi_ms@yahoo.co.in &nbsp;|&nbsp; +91 9825279602
+          Grievance Officer: Mansi Shah &nbsp;|&nbsp; aarvi_ms@yahoo.co.in &nbsp;|&nbsp; +91 9825279602
         </p>
         <p className="footer-disclosure-body footer-copy">
-          © 2025 Aarvi Data Analytics Services Pvt. Ltd. All rights reserved.
+          © 2026 Aarvi Data Analytics Services Pvt. Ltd. All rights reserved.
         </p>
 
       </div>

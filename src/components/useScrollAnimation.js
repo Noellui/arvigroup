@@ -9,8 +9,8 @@ const useScrollAnimation = () => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             entry.target.classList.add('visible');
-          } else {
-            entry.target.classList.remove('visible');
+            // Once visible, stop watching — never remove the class
+            observer.unobserve(entry.target);
           }
         });
       },

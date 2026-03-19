@@ -1,9 +1,10 @@
 .tilt-card {
   perspective: 1000px;
-  transform-style: preserve-3d;
+  /* REMOVED: transform-style: preserve-3d — this was the cause of the flicker */
   position: relative;
   transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   will-change: transform;
+  isolation: isolate;
 }
 
 .tilt-card[data-tilt-active="true"] {
@@ -12,7 +13,7 @@
 }
 
 .tilt-content {
-  transform: translateZ(20px);
+  /* REMOVED: translateZ(20px) — requires preserve-3d to work, no longer needed */
   height: 100%;
 }
 
@@ -25,11 +26,9 @@
   border-radius: inherit;
   overflow: hidden;
   pointer-events: none;
-  background: radial-gradient(
-    circle at var(--glare-x, 50%) var(--glare-y, 50%),
-    rgba(255, 255, 255, 0.15) 0%,
-    transparent 50%
-  );
+  background: radial-gradient(circle at var(--glare-x, 50%) var(--glare-y, 50%),
+      rgba(255, 255, 255, 0.15) 0%,
+      transparent 50%);
   opacity: 0;
   transition: opacity 0.3s ease;
   z-index: 5;
@@ -39,8 +38,6 @@
   opacity: 1;
 }
 
-/* Because our .service-card and .about-card have their own transforms,
-   we override them here to let the tilt component handle translations and scale */
 .tilt-card.service-card:hover,
 .tilt-card.about-card:hover,
 .tilt-card.review-bubble:hover {

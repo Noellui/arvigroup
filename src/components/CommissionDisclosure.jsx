@@ -41,7 +41,7 @@ const CommissionDisclosure = ({ onBack }) => {
                     </div>
                     <div className="disclosure-arn-item">
                         <span className="disclosure-arn-label">ARN Valid Until</span>
-                        <span className="disclosure-arn-value">October 19, 2027</span>
+                        <span className="disclosure-arn-value">3 Nov 2027</span>
                     </div>
                     <div className="disclosure-arn-item">
                         <span className="disclosure-arn-label">Grievance Officer</span>
@@ -51,7 +51,7 @@ const CommissionDisclosure = ({ onBack }) => {
 
 
                 <p className="disclosure-footer-note">
-                    Grievance Officer: Mansi Shah &nbsp;|&nbsp; Aarvi_ms@yahoo.co.in &nbsp;|&nbsp; +91 9825279602
+                    Grievance Officer: Mansi Shah &nbsp;|&nbsp; aarvi_ms@yahoo.co.in &nbsp;|&nbsp; +91 9825279602
                 </p>
             </div>
         </div>
